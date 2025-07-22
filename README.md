@@ -1,0 +1,1 @@
+This Respository consists of all the Assignments, Projects and Hands-on Practice done on Post Graduate Program in Artificial Intelligence and Machine Learning of Great Learning Academy under Texas McCombs and Great Lakes.
