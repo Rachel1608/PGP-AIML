@@ -1,5 +1,5 @@
 # Post Graduate Program in Artificial Intelligence and Machine Learning.
-# CAPSTONE PROJECT - Pneumonia Detection Using Chest X-Ray Images
+## CAPSTONE PROJECT - Pneumonia Detection Using Chest X-Ray Images
 
 ## Project Overview
 This capstone project focuses on **automatic pneumonia detection using chest X-ray images** with deep learning techniques. The aim is to build a **computer-aided diagnosis (CAD) system** that assists radiologists by classifying X-ray images as **Pneumonia** or **Normal**.
@@ -61,7 +61,7 @@ Chest X-ray images are loaded from DICOM format and converted into numerical arr
 
 ### 4. Data Visualization
 Sample X-ray images are visualized along with bounding boxes highlighting pneumonia-infected regions for interpretability.
-Capstone Project/images/image.png     ![alt text](<Target count.png>)     ![alt text](<Count of class wrt to target.png>)
+![Images](<image.png>)     ![alt text](<Target count.png>)     ![alt text](<Count of class wrt to target.png>)
 
 ### 5. Annotation Extraction
 Bounding box coordinates are extracted to identify pneumonia locations, improving supervised learning accuracy.
