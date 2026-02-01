@@ -61,7 +61,7 @@ Chest X-ray images are loaded from DICOM format and converted into numerical arr
 
 ### 4. Data Visualization
 Sample X-ray images are visualized along with bounding boxes highlighting pneumonia-infected regions for interpretability.
-![alt text](image.png)     ![alt text](<Target count.png>)     ![alt text](<Count of class wrt to target.png>)
+Capstone Project/images/image.png     ![alt text](<Target count.png>)     ![alt text](<Count of class wrt to target.png>)
 
 ### 5. Annotation Extraction
 Bounding box coordinates are extracted to identify pneumonia locations, improving supervised learning accuracy.
