@@ -76,7 +76,7 @@ A custom data generator loads images batch-by-batch to efficiently train the mod
 
 ### 8. Model Training
 The model is trained using backpropagation with optimized parameters to minimize classification error.
-![My Image](model_performance_1.png)     ![My Image](model_performance.png)
+![My Image](images/model_performance_1.png)     ![My Image](images/model_performance.png)
 
 ### 9. Model Evaluation
 Performance is evaluated using validation data to ensure generalization and reliability.
@@ -120,5 +120,5 @@ Medical diagnosis prioritizes **Recall** to reduce false negatives.
 - Training accuracy is around **97.24%** whereas validation accuracy is around **96.4%**.
   
 #### Output image
-![My Image](output_image.png)
+![My Image](images/output_image.png)
 
