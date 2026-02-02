@@ -10,12 +10,12 @@ The goal is to build a pneumonia detection system, to locate the position of inf
 The project follows an end-to-end **medical machine learning pipeline**, including metadata processing, DICOM image handling, CNN-based model training, evaluation, and performance improvement strategies.
 
 ## Data fields
-**patientId** - A patientId. Each patientId corresponds to a unique image.
-**x** - the upper-left x coordinate of the bounding box.
-**y** - the upper-left y coordinate of the bounding box.
-**width** - the width of the bounding box.
-**height** - the height of the bounding box.
-**Target** - the binary Target, indicating whether this sample has evidence of pneumonia.
+- **patientId** - A patientId. Each patientId corresponds to a unique image.
+- **x** - the upper-left x coordinate of the bounding box.
+- **y** - the upper-left y coordinate of the bounding box.
+- **width** - the width of the bounding box.
+- **height** - the height of the bounding box.
+- **Target** - the binary Target, indicating whether this sample has evidence of pneumonia.
 
 ## Objectives
 - To analyze medical chest X-ray images for pneumonia detection
@@ -61,27 +61,25 @@ Chest X-ray images are loaded from DICOM format and converted into numerical arr
 
 ### 4. Data Visualization
 Sample X-ray images are visualized along with bounding boxes highlighting pneumonia-infected regions for interpretability.
-![My Image](Images/image.png)
-    ![alt text](<Target count.png>)     ![alt text](<Count of class wrt to target.png>)
+![My Image](images/class_diagram.png)       ![My Image](images/target_count.png)     ![My Image](images/class_count_wrt_target.png)
 
 ### 5. Annotation Extraction
 Bounding box coordinates are extracted to identify pneumonia locations, improving supervised learning accuracy.
-![alt text](<Sample Training image.png>)      ![alt text](<Lung Opacity image.png>)
+![My Image](images/sample_training_image.png)      ![My Image](images/lung_opacity_image.png)
 
-### 6. Data Generator
-A custom data generator loads images batch-by-batch to efficiently train the model on large datasets without memory overflow.
-![alt text](<Data generator performance.png>)
-
-### 7. CNN Model Architecture
+### 6. CNN Model Architecture
 A Convolutional Neural Network is built to automatically extract spatial features from chest X-ray images.
+![My Image](images/training_acc_loss_image.png)
+
+### 7. Data Generator
+A custom data generator loads images batch-by-batch to efficiently train the model on large datasets without memory overflow.
 
 ### 8. Model Training
 The model is trained using backpropagation with optimized parameters to minimize classification error.
-![alt text](<Measuring accuracy and loss image.png>)
+![My Image](model_performance_1.png)     ![My Image](model_performance.png)
 
 ### 9. Model Evaluation
 Performance is evaluated using validation data to ensure generalization and reliability.
-![alt text](<Output image.png>)      ![alt text](<Last model performance.png>)
 
 ## Model Details
 - **Model Type:** Convolutional Neural Network (CNN)
@@ -112,13 +110,15 @@ Medical diagnosis prioritizes **Recall** to reduce false negatives.
 - Class weighting to handle dataset imbalance
 - Hyperparameter tuning (learning rate, batch size)
 
-## Results
+## Conclusion & Results
 - The Model got stuck at validation accuracy of 42%. Learning rate is too high. Using callbacks to improve learning rate and accuracy.
-- Training accuracy is around 60.8% whereas validation accuracy is round 63.99%. We have avoided overfitting, but it seems to be clear that a normal CNN will not help us.
+- CNN Training accuracy is around **60.8%** whereas validation accuracy is round **63.99%**. We have avoided overfitting, but it seems to be clear that a normal CNN will not help us.
 - The dataset is too large to fit into memory, so we need to create a generator that loads data on the fly.
     - The generator takes in some filenames, batch_size and other parameters.
     - The generator outputs a random batch of numpy images and numpy masks.
     - The execution time taken for each epoch took way too much time. Thus taking a sample of 1000 records each to execute further
-- Training accuracy is around 97.24% whereas validation accuracy is around 96.4%.
-
+- Training accuracy is around **97.24%** whereas validation accuracy is around **96.4%**.
+  
+#### Output image
+![My Image](output_image.png)
 
